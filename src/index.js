@@ -48,7 +48,16 @@ function returnFnResult(fn) {
  Функция должна принимать число (значение по умолчанию - 0) и возвращать функцию (F)
  При вызове F, переданное число должно быть увеличено на единицу и возвращено из F
  */
-function returnCounter(number) {}
+function returnCounter(number) {
+	return function fn() {
+		if (number == undefined) {
+			number = 1
+		} else {
+			number++;
+		}
+		return number;
+	}
+}
 
 /*
  Задание 6 *:
